@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# by piscue
+# by piscue, edited by couteausuisse
 
 # Setting variables
-backup_path="/home/core/backups"
-#backup_path="/home/core/backups"
+backup_path="/dataPod1/Scratch/docker"
+
 tar_opts="--exclude='/var/run/*'"
 cd "${BASH_SOURCE%/*}" || exit
 
@@ -31,9 +31,5 @@ source backup-volumes.sh
 echo ""
 
 echo - upload to dropbox
-
-echo ""
-
-source sync-dropbox.sh
 
 echo ""
